@@ -17,9 +17,9 @@ from rest_framework.decorators import action, api_view
 from rest_framework.exceptions import ValidationError
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import AccessToken
+from reviews.models import Category, Comment, Genre, Review, Title, User
 
 from api_yamdb.settings import DEFAULT_FROM_EMAIL
-from reviews.models import Category, Comment, Genre, Review, Title, User
 
 
 @api_view(["POST"])

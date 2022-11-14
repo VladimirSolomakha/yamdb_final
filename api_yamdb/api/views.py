@@ -1,4 +1,3 @@
-from api_yamdb.settings import DEFAULT_FROM_EMAIL
 from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import send_mail
 from django.db.models import Avg
@@ -20,6 +19,7 @@ from api.serializers import (CategorySerializer, CommentSerializer,
                              TitleSerializerPost, TokenSerializer,
                              UserEditSerializer, UserSerializer)
 from api.service import GetPostDeleteViewSet, TitleFilter
+from api_yamdb.settings import DEFAULT_FROM_EMAIL
 
 
 @api_view(["POST"])

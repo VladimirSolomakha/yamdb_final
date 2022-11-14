@@ -1,8 +1,8 @@
 from django_filters import rest_framework
 from rest_framework import filters, mixins, viewsets
+from reviews.models import Title
 
 from .permissions import IsAdminOrReadOnly
-from reviews.models import Title
 
 
 class TitleFilter(rest_framework.FilterSet):

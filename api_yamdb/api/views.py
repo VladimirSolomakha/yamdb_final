@@ -6,7 +6,6 @@ from api.serializers import (CategorySerializer, CommentSerializer,
                              TitleSerializerPost, TokenSerializer,
                              UserEditSerializer, UserSerializer)
 from api.service import GetPostDeleteViewSet, TitleFilter
-from api_yamdb.settings import DEFAULT_FROM_EMAIL
 from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import send_mail
 from django.db.models import Avg
@@ -18,6 +17,8 @@ from rest_framework.decorators import action, api_view
 from rest_framework.exceptions import ValidationError
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import AccessToken
+
+from api_yamdb.settings import DEFAULT_FROM_EMAIL
 from reviews.models import Category, Comment, Genre, Review, Title, User
 
 

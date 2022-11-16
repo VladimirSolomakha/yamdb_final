@@ -40,6 +40,11 @@ docker compose v2.12.2
 docker-compose exec web python manage.py migrate
 docker-compose exec web python manage.py createsuperuser
 docker-compose exec web python manage.py collectstatic --no-input
+```
+Для загрузки данных передайте например по scp в каталог /home/<user>/fixtures.json
+затем выполните код:
+```
+docker-compose cp /home/<user>/fixtures.json web:/app
 docker-compose exec web python manage.py loaddata fixtures.json
 ```
 ### Авторы
